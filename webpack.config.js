@@ -2,6 +2,7 @@ const path = require("path");
 const merge = require("webpack-merge");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = (env) => {
   const commonConfig = {
@@ -41,7 +42,18 @@ module.exports = (env) => {
 
   const prodConfig = {
     mode: "production",
-    plugins: [new CleanWebpackPlugin()],
+    module: {
+      rules: [
+        {
+          test: /\.s?css$/i,
+          use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+        },
+      ],
+    },
+    plugins: [
+      new CleanWebpackPlugin(),
+      new MiniCssExtractPlugin({ filename: "[name].css" }),
+    ],
   };
 
   return env.mode === "development"
