@@ -8,7 +8,7 @@ module.exports = (env) => {
   const commonConfig = {
     entry: "./src/js/index.js",
     output: {
-      path: path.resolve(__dirname, "dist"),
+      path: path.resolve(__dirname, "./dist"),
       filename: "bundle.js",
     },
     module: {
