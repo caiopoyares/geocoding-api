@@ -1,6 +1,4 @@
-# Geocoding API - Teste
-
-Teste para a B2W utilizando a API do Google Geocoding e Google Maps.
+# Geocoding API
 
 ## Instalação
 
