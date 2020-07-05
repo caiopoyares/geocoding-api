@@ -16,6 +16,7 @@ class App {
   init() {
     Map.initGoogleMap(global);
     this.setListeners();
+    ui.input.focus();
   }
 }
 

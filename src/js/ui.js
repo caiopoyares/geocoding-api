@@ -11,7 +11,7 @@ class UI {
 
   onNoResults() {
     this.warningBox.innerText =
-      "Desculpe, não encontramos nenhum resultado para a sua pesqthissa.";
+      "Desculpe, não encontramos nenhum resultado para a sua pesquisa.";
     this.warningBox.style.color = colors.secondaryText;
     this.warningBox.style.display = "block";
     this.submitBtn.innerText = "Vamos lá!";
