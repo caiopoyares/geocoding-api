@@ -12,6 +12,11 @@ export function initGoogleMap(windowObj) {
     windowObj.map = new google.maps.Map(ui.map, {
       center: initialAddress,
       zoom: 15,
+      mapTypeControl: true,
+      mapTypeControlOptions: {
+        style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
+      },
+      fullscreenControl: false,
     });
   }
   windowObj.initMap = initMap;
@@ -36,6 +41,11 @@ export function assignNewMapAddress(address) {
   global.map = new google.maps.Map(ui.map, {
     center: address,
     zoom: 16,
+    mapTypeControl: true,
+    mapTypeControlOptions: {
+      style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
+    },
+    fullscreenControl: false,
   });
 }
 
