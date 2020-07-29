@@ -25,7 +25,7 @@ export function initGoogleMap(windowObj) {
 export async function fetchLocation(inputValue) {
   const addressToFetch = utils.formatInputValueIntoAddress(inputValue);
   const response = await fetch(
-    `${CONSTANT.endpoint}address=${addressToFetch}&key=${CONSTANT.apiKey}`
+    `${CONSTANT.endpoint}address=${addressToFetch}&key=${CONSTANT.google_credential}`
   );
   const addressData = await response.json();
 
